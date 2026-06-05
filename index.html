@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Book Project Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>My Book Project Tracker</h1>
+
+  <p>This app helps me organize my children’s book ideas.</p>
+
+  <h2>Add a Book</h2>
+
+  <input id="bookTitle" type="text" placeholder="Book title">
+  <input id="mainCharacter" type="text" placeholder="Main character">
+
+  <select id="bookSize">
+    <option value="8.5 x 8.5">8.5 x 8.5</option>
+    <option value="5.5 x 8.5">5.5 x 8.5</option>
+    <option value="6 x 9">6 x 9</option>
+    <option value="Custom">Custom</option>
+  </select>
+
+  <input id="pageCount" type="text" placeholder="Page count">
+
+  <select id="bookStatus">
+    <option value="Idea">Idea</option>
+    <option value="Writing">Writing</option>
+    <option value="Drawing">Drawing</option>
+    <option value="Editing">Editing</option>
+    <option value="Ready for KDP">Ready for KDP</option>
+    <option value="Published">Published</option>
+  </select>
+
+  <textarea id="bookNotes" placeholder="Notes or next steps"></textarea>
+
+  <button onclick="addProject()">Add Project</button>
+
+<h2>My Book Projects</h2>
+
+<div id="stats" class="stats-box"></div>
+
+<input id="searchInput" type="text" placeholder="Search by book title" oninput="displayProjects()">
+<select id="statusFilter" onchange="displayProjects()">
+  <option value="All">All Statuses</option>
+  <option value="Idea">Idea</option>
+  <option value="Writing">Writing</option>
+  <option value="Drawing">Drawing</option>
+  <option value="Editing">Editing</option>
+  <option value="Ready for KDP">Ready for KDP</option>
+  <option value="Published">Published</option>
+</select>
+
+<div id="projectList"></div>
+  <script src="script.js"></script>
+</body>
+</html>

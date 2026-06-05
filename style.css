@@ -1,0 +1,91 @@
+body {
+  background-color: #f8efe6;
+  font-family: Arial, sans-serif;
+  padding: 30px;
+}
+
+h1 {
+  color: #5c4033;
+  font-size: 42px;
+  margin-top: 20px;
+}
+
+h2 {
+  color: #2f1f1a;
+}
+
+p {
+  font-size: 18px;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 280px;
+  border: 1px solid #c9a98f;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 90px;
+  font-family: Arial, sans-serif;
+  resize: vertical;
+}
+
+button {
+  background-color: #d8a48f;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #c88f7b;
+}
+
+.project-card {
+  background-color: white;
+  border: 1px solid #d8c3b0;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 15px;
+  width: 320px;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #5c4033;
+}
+
+.delete-button {
+  background-color: #b86b5e;
+  margin-top: 10px;
+}
+
+.delete-button:hover {
+  background-color: #9f574d;
+}
+.card-status {
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+.stats-box {
+  background-color: #fffaf5;
+  border: 1px solid #d8c3b0;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  width: 320px;
+}
+
+.stats-box p {
+  margin: 5px 0;
+}
