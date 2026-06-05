@@ -62,7 +62,13 @@ function displayProjects() {
       <p><strong>Main Character:</strong> ${project.character}</p>
 <p><strong>Book Size:</strong> ${project.size || "Not added yet"}</p>
 <p><strong>Page Count:</strong> ${project.pages}</p>
-<p><strong>Target Date:</strong> ${project.targetDate || "No date yet"}</p>
+<p><strong>Target Date:</strong></p>
+<input 
+  class="card-date" 
+  type="date" 
+  value="${project.targetDate || ""}" 
+  onchange="updateProjectTargetDate(${project.id}, this.value)"
+>
 <p><strong>Notes:</strong></p>
 <textarea class="card-notes" onchange="updateProjectNotes(${project.id}, this.value)">${project.notes || ""}</textarea>
 
@@ -81,6 +87,15 @@ function displayProjects() {
 
     projectList.appendChild(projectCard);
   }
+}
+function updateProjectTargetDate(id, newDate) {
+  for (let project of projects) {
+    if (project.id === id) {
+      project.targetDate = newDate;
+    }
+  }
+
+  saveProjects();
 }
 function updateProjectNotes(id, newNotes) {
   for (let project of projects) {
